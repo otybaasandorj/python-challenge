@@ -59,7 +59,7 @@ for lines in analysis:
     print(lines)
 
 # Export to a text file in folder named 'analysis'
-output_file = os.path.join("analysis", "budget_data_analysis.txt")
+output_file = os.path.join("analysis", "election_data_analysis.txt")
 
 with open(output_file, 'w') as file:
     for lines in analysis:
