@@ -1,8 +1,11 @@
+# Modules
 import os
 import csv
 
+# Set path for our file
 budget_data_csv = os.path.join("Resources", "budget_data.csv")
 
+# Set variables
 total_months = 0
 net_total = 0
 previous_profit_loss = None
@@ -10,7 +13,7 @@ changes = []
 greatest_increase = {'date': None, 'amount': float('-inf')}
 greatest_decrease = {'date': None, 'amount': float('inf')}
 
-
+# Open the csv file
 with open(budget_data_csv, 'r') as csv_file:
     csv_reader = csv.reader(csv_file, delimiter = ',')
 
@@ -66,7 +69,6 @@ analysis = [
 # Print all results
 for lines in analysis:
     print(lines)
-
 
 # Export to a text file in folder named 'analysis'
 output_file = os.path.join("analysis", "budget_data_analysis.txt")
